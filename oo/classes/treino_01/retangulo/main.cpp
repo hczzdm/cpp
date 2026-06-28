@@ -28,6 +28,17 @@ public:
 
     double area() {
         return altura * largura;
+    } 
+
+    double perimetro() {
+        return 2 * (altura + largura); 
+    } 
+    
+    bool ehQuadrado(){
+        if(altura == largura){
+            return true;
+        }
+        return false;
     }
 
 private:
@@ -41,6 +52,12 @@ int main() {
     cout << "Altura: " << retangulo.getAltura() << endl;
     cout << "Largura: " << retangulo.getLargura() << endl;
     cout << "Area: " << retangulo.area() << endl;
+    cout << "Perimetro: " << retangulo.perimetro() << endl;
+    char resposta = 'N';
+    if(retangulo.ehQuadrado()){
+        resposta = 'S';
+    }
+    cout << "É um quandrado ? " << resposta << '\n';
 
     return 0;
 }
