@@ -10,11 +10,11 @@ public:
         this->largura = largura;
     }
 
-    double getAltura() {
+    double getAltura() const {
         return this->altura;
     }
 
-    double getLargura() {
+    double getLargura() const{
         return this->largura;
     }
 
